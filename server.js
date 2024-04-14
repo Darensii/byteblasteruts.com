@@ -13,7 +13,7 @@ app.post('/ask', async (req, res) => {
     try {
         const { question } = req.body; // 前端发送的问题，请确保你的前端能够将问题发送到这个路由
         const apiKey = 'sk-TaNogOVTyxveAlR1qrYqBMQmNMRpLuzQ08HxRJ2gKja2YBw0'; // 请替换为你的Google Gemini AI Studio API密钥
-        const apiUrl = 'https://api.chatanywhere.com.cn/v1/models'; // Google Gemini AI Studio API地址
+        const apiUrl = 'https://api.openai.com/v1/chat/completions'; // Google Gemini AI Studio API地址
 
         // 发送POST请求给Google Gemini AI Studio API
         const response = await axios.post(`${apiUrl}/chat`, {
